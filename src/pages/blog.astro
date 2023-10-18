@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
 const pageTitle = "Resus Docs blogpage";
 ---
 
@@ -13,9 +16,7 @@ const pageTitle = "Resus Docs blogpage";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
+    <Header />
     <h1>Resus Docs</h1>
     <section>
       <h1>{pageTitle}</h1>
@@ -27,5 +28,6 @@ const pageTitle = "Resus Docs blogpage";
         <li><a href="/posts/post-3">Third Post</a></li>
       </ul>
     </section>
+    <Footer />
   </body>
 </html>

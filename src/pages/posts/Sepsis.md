@@ -18,7 +18,7 @@ tags: ["sepsis", "astro", "blogging", "learning in public"]
 
 - Sepsis occurs when host response to life threatening infectious pathogen causes organ dysfunction, as manifested by
 
-  - Increase in sofa score >= 2. ^[measures function in 6 different domains: pulmonary (oxygen) , renal (creatinine), neurologic status (GCS), coagulation (platelet count), liver function(bilirubin), cardiovascular status(SBP)]
+  - Increase in sofa score >= 2.[^2]
 
 - Gram positive sepsis seems to be the most common cause in US
 - Any patient suspected of having sepsis should be evaluated for source of infection.
@@ -45,3 +45,4 @@ Management
 - Resuscitation phase (first 6 hours)
 
 [^1]: [The Third International Consensus Definition of Sepsis](https://jamanetwork.com/journals/jama/fullarticle/2492881)
+[^2]: [measures function in 6 different domains: pulmonary (oxygen) , renal (creatinine), neurologic status (GCS), coagulation (platelet count), liver function(bilirubin), cardiovascular status(SBP)]

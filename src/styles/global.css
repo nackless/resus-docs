@@ -161,6 +161,7 @@ html {
   }
   .header__main__content {
     display: flex;
+    
     justify-content: space-between;
   }
 
@@ -209,7 +210,7 @@ html {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0.5rem;
+    margin: 0;
   }
 
   .navbar__main a:focus,

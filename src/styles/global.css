@@ -1,3 +1,122 @@
+
+:root {
+  --fs-300: 0.9375rem;
+  --fs-400: 1.0625rem;
+  --fs-500: 1.375rem;
+  --fs-600: 1.875rem;
+  --fs-700: 2rem;
+
+  --ff-body: "Roboto", sans-serif;
+  --ff-heading: "Playfair Display", serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --clr-primary-200: hsla(220, 70%, 95%, 1);
+  --clr-primary-300: hsla(220, 100%, 39%, 1);
+  --clr-primary-400: hsla(220, 90%, 45%, 1);
+  --clr-primary-500: hsla(220, 100%, 16%, 1);
+
+  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-neutral-300: hsla(0, 0%, 50%, 1);
+  --clr-neutral-400: hsla(0, 0%, 40%, 1);
+  --clr-neutral-500: hsla(0, 0%, 60%, 1);
+  --clr-neutral-900: hsla(0, 0%, 10%, 1);
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2.25rem;
+    --fs-700: 3rem;
+  }
+}
+
+/* //////////////////////
+  RESET - source: https://piccalil.li/blog/a-modern-css-reset
+  /////////////////////// */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul:where([role="list"]),
+ol:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
 html {
     background-color: #ffffff;
     font-family: sans-serif;
@@ -6,19 +125,19 @@ html {
   body {
     margin: 0 auto;
     width: 100%;
-    max-width: 80ch;
+    max-width:72rem;
     padding: 1rem;
     line-height: 1.5;
   }
   
-  * {
+  /* * {
     box-sizing: border-box;
-  }
+  } */
   
-  h1 {
+  /* h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
-  }
+  } */
 
   /* nav styles */
 
@@ -35,8 +154,71 @@ html {
     background-color: #ff9776;
   }
   
+  .container {
+    margin-inline: auto;
+    padding-inline: 1.5em;
+    /* max-width: 72rem; */
+  }
+  .header__main__content {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.nav-links {
+  .main__title {
+    text-align: center;
+  }
+
+  .main__heading {
+    font-family: "Kalam", cursive;
+    font-size: 3.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main__subheading {
+    padding: 0;
+    margin: 0 0 5rem 0;
+  }
+
+  .logo__main {
+    padding: 0;
+    margin: 1rem 0 0 0;
+  }
+
+  .navbar__main {
+    /* width: 100%; */
+    /* top: 5rem; */
+    /*left: 48px;
+    background-color: #ff9776; */
+    padding: 0;
+    margin: 0;
+  }
+
+  .flex-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1em);
+  }
+
+  .navbar__main a {
+    /* display: inline-block; */
+    text-align: center;
+    color: var(--clr-neutral-900);
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0.5rem;
+  }
+
+  .navbar__main a:focus,
+  .navbar__main a:hover {
+    color: var(--clr-neutral-400);
+    text-decoration: underline;
+  }
+
+/* .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
@@ -58,7 +240,7 @@ html {
   .nav-links a:hover,
   .nav-links a:focus {
     background-color: #ff9776;
-  }
+  } */
   
   .expanded {
     display: unset;
